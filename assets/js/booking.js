@@ -233,6 +233,7 @@
     document.documentElement.classList.add('bk-open');
     root.setAttribute('aria-hidden', 'false');
     var scrim = $('.bk-scrim'); if (scrim) scrim.hidden = false;
+    document.dispatchEvent(new CustomEvent('vl:booking-open'));
     setTimeout(function () {
       var target = !state.checkin ? $('[name=bk-in]', root) : opts.room ? $('[data-room-card="' + opts.room + '"] [data-d="1"]', root) : $('.bk-close', root);
       if (target) target.focus();
@@ -242,6 +243,7 @@
     document.documentElement.classList.remove('bk-open');
     root.setAttribute('aria-hidden', 'true');
     var scrim = $('.bk-scrim'); if (scrim) scrim.hidden = true;
+    document.dispatchEvent(new CustomEvent('vl:booking-close'));
     if (lastFocus) lastFocus.focus();
   }
 
@@ -319,6 +321,7 @@
     root.setAttribute('aria-modal', 'true');
     root.setAttribute('aria-labelledby', 'bk-title');
     root.setAttribute('aria-hidden', 'true');
+    root.setAttribute('data-lenis-prevent', ''); // the panel scrolls natively under Lenis
     render();
     bind();
     sync();

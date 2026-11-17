@@ -6,6 +6,24 @@ Two homepage concepts for [villaluxa.com](https://villaluxa.com/), a four-room b
 - `/a/` is **Salão**: evening and cinematic. Forest green, gilt and oxblood, Bodoni Moda with Jost, a hero video, capsule-framed photos and a chequered marble band.
 - `/b/` is **Azulejo**: daylight and conversion-first. Chalk white, cobalt and Pena ochre, Young Serif with Instrument Sans, a booking card above the fold, an original azulejo tile pattern and an interactive room chooser.
 
+## Motion and icons
+
+`assets/js/motion.js` is shared by both concepts. It adds:
+
+- GSAP entrance animations: a masked line-by-line headline reveal, photos that settle into place, staggered lists, and light parallax.
+- Lenis smooth scrolling, synced with ScrollTrigger. In-page anchor links account for the header, and page scrolling pauses while the booking panel is open.
+
+All of it is switched off for visitors who prefer reduced motion.
+
+Third-party libraries are pinned and stored in `assets/vendor/` so the site has no runtime CDN dependency:
+
+| Library | Licence |
+|---|---|
+| GSAP 3.13.0 with ScrollTrigger and SplitText | GSAP standard licence, free for all uses |
+| Lenis 1.1.18 | MIT |
+| Lucide 0.469.0 icons | ISC |
+| WhatsApp logo from Simple Icons (`assets/icons/whatsapp.svg`) | CC0 |
+
 ## Booking
 
 Both concepts share `assets/js/booking.js`. It handles dates, guests, rooms and extras, and shows a live estimated total. For now it sends a pre-filled request to WhatsApp (+351 924 338 608).

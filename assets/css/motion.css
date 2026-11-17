@@ -1,0 +1,20 @@
+/* Shared motion styles: Lenis recommended rules + pre-animation states for GSAP.
+   html.js-motion is set by an inline script in <head> (skipped for reduced motion). */
+
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: clip; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+
+/* Hero content stays hidden until the GSAP intro reveals it (no flash before JS runs) */
+.js-motion .hero-kicker,
+.js-motion .hero-title,
+.js-motion .hero-sub,
+.js-motion .qb,
+.js-motion .hero-place,
+.js-motion .hero h1,
+.js-motion .hero-lede,
+.js-motion .book-card,
+.js-motion .hero-alt,
+.js-motion .hero-art { visibility: hidden; }
