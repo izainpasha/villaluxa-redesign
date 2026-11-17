@@ -381,7 +381,8 @@ svg.lucide { flex: none; }
   .mbar.is-on { transform: none; }
   .mbar p { margin: 0; flex: 1; font-size: 14px; color: var(--mute); }
   .mbar strong { font: 400 22px var(--serif); color: var(--cobalt-deep); }
-  .mbar-wa { width: 48px; height: 48px; flex: none; display: grid; place-items: center; border: 1.5px solid var(--line); border-radius: 10px; color: var(--cobalt); }
+  .mbar-wa { display: none !important; } /* the floating WhatsApp button covers this */
+  .mbar-wa-legacy { width: 48px; height: 48px; flex: none; display: grid; place-items: center; border: 1.5px solid var(--line); border-radius: 10px; color: var(--cobalt); }
   .mbar .btn { min-height: 48px; }
   .bk-head, .bk-summary { padding-left: 16px; padding-right: 16px; }
   .bk-body { padding: 10px 16px 20px; }

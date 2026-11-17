@@ -1,0 +1,58 @@
+/* Floating WhatsApp button, shared by both concepts.
+   Logo: Simple Icons (CC0), applied as a mask. Motion is deliberately quiet:
+   a soft entrance, then a faint ring every few seconds. */
+
+.wa-fab {
+  position: fixed; right: 24px; bottom: 24px; z-index: 45;
+  display: flex; align-items: center; gap: 0;
+  height: 58px; min-width: 58px; padding: 0 17px;
+  border-radius: 999px;
+  background: #25d366; color: #fff;
+  text-decoration: none;
+  font: 600 15px/1 system-ui, sans-serif;
+  box-shadow: 0 12px 28px -10px rgba(10, 60, 30, .55), 0 2px 6px rgba(0, 0, 0, .12);
+  transition: transform .3s cubic-bezier(.2, .7, .2, 1), box-shadow .3s, opacity .3s, gap .35s, background-color .2s;
+  animation: wa-in .7s cubic-bezier(.2, .7, .2, 1) 1.4s backwards;
+}
+.wa-fab:hover { background: #1ebe5b; transform: translateY(-2px); gap: 10px; box-shadow: 0 16px 34px -12px rgba(10, 60, 30, .6), 0 2px 6px rgba(0, 0, 0, .12); }
+.wa-fab:focus-visible { outline: 3px solid #128c4a; outline-offset: 3px; gap: 10px; }
+
+.wa-fab-icon {
+  width: 24px; height: 24px; flex: none; background: currentColor;
+  -webkit-mask: url("../icons/whatsapp.svg") center / contain no-repeat;
+  mask: url("../icons/whatsapp.svg") center / contain no-repeat;
+}
+
+/* Label slides out on hover / keyboard focus (desktop) */
+.wa-fab-label { max-width: 0; overflow: hidden; white-space: nowrap; opacity: 0; transition: max-width .35s cubic-bezier(.2, .7, .2, 1), opacity .25s; }
+.wa-fab:hover .wa-fab-label, .wa-fab:focus-visible .wa-fab-label { max-width: 200px; opacity: 1; }
+
+/* Faint ring: one soft pulse, then rest */
+.wa-fab::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  box-shadow: 0 0 0 0 rgba(37, 211, 102, .45);
+  animation: wa-ring 5s ease-out 3s infinite;
+  pointer-events: none;
+}
+.wa-fab:hover::before { animation: none; }
+
+@keyframes wa-in { from { opacity: 0; transform: translateY(14px) scale(.85); } to { opacity: 1; transform: none; } }
+@keyframes wa-ring {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, .45); }
+  30% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+}
+
+/* Out of the way while the booking panel is open */
+.bk-open .wa-fab { opacity: 0; pointer-events: none; transform: translateY(10px); }
+
+/* Phones: sit above the bottom booking bar */
+@media (max-width: 760px) {
+  .wa-fab { right: 16px; bottom: calc(86px + env(safe-area-inset-bottom)); height: 54px; min-width: 54px; padding: 0 15px; }
+  .wa-fab-label { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wa-fab, .wa-fab::before { animation: none !important; }
+  .wa-fab { transition: none; }
+}
