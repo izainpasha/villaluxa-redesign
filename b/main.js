@@ -1,4 +1,5 @@
 (function () {
+  if (window.lucide) window.lucide.createIcons();
   var nav = document.querySelector('[data-nav]');
   var mbar = document.querySelector('.mbar');
   var card = document.querySelector('.book-card');

@@ -1,4 +1,5 @@
 (function () {
+  if (window.lucide) window.lucide.createIcons();
   var nav = document.querySelector('[data-nav]');
   function onScroll() { nav.classList.toggle('is-solid', window.scrollY > 40); }
   onScroll();

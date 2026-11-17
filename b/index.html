@@ -31,7 +31,7 @@
       <a href="#faq">FAQ</a>
     </nav>
     <a class="nav-wa" href="https://wa.me/351924338608" target="_blank" rel="noopener">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/></svg>
+      <span class="i-wa" aria-hidden="true"></span>
       <span>+351 924 338 608</span>
     </a>
     <button class="btn btn-cobalt btn-sm" type="button" data-book-open>Book direct</button>
@@ -49,6 +49,12 @@
       <p class="hero-lede">Villa Luxa is a four-room townhouse in the centre of Sintra: velvet headboards, gilt mirrors, a chequered marble hall and the Moorish Castle in the window.</p>
 
       <form class="book-card" data-quick-book aria-label="Check availability">
+        <div class="bc-tiles" aria-hidden="true"></div>
+        <div class="bc-inner">
+        <div class="bc-top">
+          <p class="bc-title">Book direct with the house</p>
+          <p class="bc-from">Rooms from <strong>€89</strong> a night</p>
+        </div>
         <div class="bc-row">
           <label class="bc-field"><span>Check-in</span><input type="date" data-qb-in required></label>
           <label class="bc-field"><span>Check-out</span><input type="date" data-qb-out required></label>
@@ -60,11 +66,13 @@
         </div>
         <button class="btn btn-cobalt bc-go" type="submit">See rooms and prices</button>
         <ul class="bc-perks">
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Rooms from €89 a night</li>
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Nothing charged to request</li>
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>The house replies on WhatsApp</li>
+          <li><i data-lucide="check" aria-hidden="true"></i>Nothing charged to request</li>
+          <li><i data-lucide="check" aria-hidden="true"></i>Free cancellation on the Flexible rate</li>
+          <li><i data-lucide="check" aria-hidden="true"></i>The house replies on WhatsApp</li>
         </ul>
+        </div>
       </form>
+      <p class="hero-alt">Prefer to talk first? <a href="https://wa.me/351924338608?text=Hello%20Villa%20Luxa%2C%20I%20have%20a%20question%20about%20staying%20with%20you." target="_blank" rel="noopener"><span class="i-wa" aria-hidden="true"></span>Message the house on WhatsApp</a></p>
     </div>
 
     <div class="hero-art">
@@ -106,6 +114,10 @@
           <div><dt>Lisbon Airport</dt><dd>30 km</dd></div>
           <div><dt>Historic centre</dt><dd>1 min walk</dd></div>
         </dl>
+        <div class="cta-row">
+          <button class="btn btn-cobalt" type="button" data-book-open>Check availability</button>
+          <a class="btn btn-line" href="#rooms">See the rooms</a>
+        </div>
       </div>
       <figure class="hg-b">
         <img src="../assets/img/dusk-sintra.webp" alt="Dusk over Sintra: the National Palace's conical chimneys lit gold above the rooftops." loading="lazy">
@@ -142,6 +154,7 @@
           <p>Ivory and bright under a crystal chandelier, with a private terrace and outdoor seating. Neoclassical details, warm wooden floors and room for four.</p>
           <ul class="spec"><li><strong>Beds</strong>1 king, 1 queen</li><li><strong>Sleeps</strong>4</li><li><strong>Size</strong>28 m²</li><li><strong>Pets</strong>Welcome</li></ul>
           <div class="ch-cta"><p class="price">€120 <small>a night</small></p><button class="btn btn-cobalt" type="button" data-book-open data-room="family-terrace">Book this room</button></div>
+          <a class="ch-ask" href="https://wa.me/351924338608?text=Hello%20Villa%20Luxa%2C%20I%20have%20a%20question%20about%20the%20Family%20Room%20with%20Terrace." target="_blank" rel="noopener">Ask about this room on WhatsApp</a>
         </div>
       </article>
 
@@ -153,6 +166,7 @@
           <p>Exposed timber beams, teal velvet and a view up to the Moorish Castle and the Sintra hills, with a king and a queen bed for families.</p>
           <ul class="spec"><li><strong>Beds</strong>1 king, 1 queen</li><li><strong>Sleeps</strong>4</li><li><strong>Size</strong>28 m²</li><li><strong>Pets</strong>Welcome</li></ul>
           <div class="ch-cta"><p class="price">€110 <small>a night</small></p><button class="btn btn-cobalt" type="button" data-book-open data-room="family">Book this room</button></div>
+          <a class="ch-ask" href="https://wa.me/351924338608?text=Hello%20Villa%20Luxa%2C%20I%20have%20a%20question%20about%20the%20Family%20Room." target="_blank" rel="noopener">Ask about this room on WhatsApp</a>
         </div>
       </article>
 
@@ -164,6 +178,7 @@
           <p>Red velvet headboard, a carved dressing table and a shell-back armchair by windows full of green. Comfortable, warm and very Sintra.</p>
           <ul class="spec"><li><strong>Bed</strong>1 king</li><li><strong>Sleeps</strong>2</li><li><strong>Size</strong>22 m²</li><li><strong>Pets</strong>Welcome</li></ul>
           <div class="ch-cta"><p class="price">€100 <small>a night</small></p><button class="btn btn-cobalt" type="button" data-book-open data-room="king-suite">Book this room</button></div>
+          <a class="ch-ask" href="https://wa.me/351924338608?text=Hello%20Villa%20Luxa%2C%20I%20have%20a%20question%20about%20the%20Deluxe%20King%20Suite." target="_blank" rel="noopener">Ask about this room on WhatsApp</a>
         </div>
       </article>
 
@@ -175,6 +190,7 @@
           <p>Pastel blue, a navy velvet headboard and brass reading lamps. Small, romantic and the best value in the house.</p>
           <ul class="spec"><li><strong>Bed</strong>1 double</li><li><strong>Sleeps</strong>2</li><li><strong>Size</strong>18 m²</li><li><strong>Pets</strong>Not in this room</li></ul>
           <div class="ch-cta"><p class="price">€89 <small>a night</small></p><button class="btn btn-cobalt" type="button" data-book-open data-room="double">Book this room</button></div>
+          <a class="ch-ask" href="https://wa.me/351924338608?text=Hello%20Villa%20Luxa%2C%20I%20have%20a%20question%20about%20the%20Deluxe%20Double%20Room." target="_blank" rel="noopener">Ask about this room on WhatsApp</a>
         </div>
       </article>
     </div>
@@ -184,7 +200,10 @@
 <!-- DIRECT -->
 <section class="direct">
   <div class="wrap direct-in">
-    <h2>Why book with the house</h2>
+    <div>
+      <h2>Why book with the house</h2>
+      <button class="btn btn-ink" type="button" data-book-open>Book direct</button>
+    </div>
     <ul>
       <li><h3>Talk to a person</h3><p>Your request lands with the house on WhatsApp, not a call centre.</p></li>
       <li><h3>Cancel free</h3><p>Up to 7 days before you arrive, on the Flexible rate.</p></li>
@@ -239,13 +258,20 @@
         </div>
       </article>
     </div>
+    <div class="tours-more">
+      <p><strong>Not sure which to choose?</strong> Tell the house your dates and they'll suggest the right day out.</p>
+      <a class="btn btn-cobalt" href="https://wa.me/351924338608?text=Hello%20Villa%20Luxa%2C%20could%20you%20help%20me%20plan%20a%20tour%20during%20my%20stay%3F" target="_blank" rel="noopener">Plan my tour on WhatsApp</a>
+    </div>
   </div>
 </section>
 
 <!-- EXTRAS -->
 <section class="extras">
   <div class="wrap extras-in">
-    <h2>Add to your stay</h2>
+    <div>
+      <h2>Add to your stay</h2>
+      <button class="btn btn-line btn-sm extras-cta" type="button" data-book-open>Add extras when you book</button>
+    </div>
     <ul>
       <li><img src="../assets/img/airport-transfer.webp" alt="" loading="lazy"><div><h3>Airport transfer</h3><p>€50 each way, up to 6 people</p></div></li>
       <li><img src="../assets/img/massage.webp" alt="" loading="lazy"><div><h3>In-room massage</h3><p>60, 90 or 120 min, from €65</p></div></li>
@@ -270,7 +296,13 @@
       <figure><blockquote><p>“Excellent, very central location for visiting Sintra. The welcome is charming and arrival can be done independently.”</p></blockquote><figcaption>A., France</figcaption></figure>
       <figure><blockquote><p>“A warm welcome. Perfect location for visiting the main monuments of Sintra. The hotel has a really beautiful vintage decor.”</p></blockquote><figcaption>E., Portugal</figcaption></figure>
     </div>
-    <p class="rv-note">Verified stays on Booking.com, 2026</p>
+    <div class="rv-foot">
+      <p class="rv-note">Verified stays on Booking.com, 2026</p>
+      <div class="cta-row">
+        <button class="btn btn-ochre" type="button" data-book-open>Stay with us</button>
+        <a class="btn btn-ghost-light" href="https://wa.me/351924338608" target="_blank" rel="noopener">Ask the house a question</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -283,11 +315,15 @@
         <h2>Leave the car. Sintra is on foot from here.</h2>
       </header>
       <div class="how">
-        <div><h3>From Lisbon Airport</h3><p>30 km. Book the private car for €50 each way, up to six people.</p></div>
-        <div><h3>By train</h3><p>About 40 minutes from Lisbon, then a 10-minute walk uphill.</p></div>
-        <div><h3>By car</h3><p>No parking at the house. Use a public car park, then a taxi or Bolt (not Uber).</p></div>
+        <div><h3><i data-lucide="plane" aria-hidden="true"></i>From Lisbon Airport</h3><p>30 km. Book the private car for €50 each way, up to six people.</p></div>
+        <div><h3><i data-lucide="train-front" aria-hidden="true"></i>By train</h3><p>About 40 minutes from Lisbon, then a 10-minute walk uphill.</p></div>
+        <div><h3><i data-lucide="car-front" aria-hidden="true"></i>By car</h3><p>No parking at the house. Use a public car park, then a taxi or Bolt (not Uber).</p></div>
       </div>
       <p class="address">Largo Ferreira de Castro 19, 2710-551 Sintra. <a href="https://maps.google.com/?q=Largo+Ferreira+de+Castro+19,+Sintra" target="_blank" rel="noopener">Open in Maps</a></p>
+      <div class="cta-row">
+        <a class="btn btn-cobalt" href="https://wa.me/351924338608?text=Hello%20Villa%20Luxa%2C%20I%20would%20like%20to%20book%20an%20airport%20transfer." target="_blank" rel="noopener">Book the airport car, €50</a>
+        <button class="btn btn-line" type="button" data-book-open>Check availability</button>
+      </div>
     </div>
     <ol class="route" aria-label="Walking times from Villa Luxa">
       <li class="route-home"><span>Villa Luxa</span></li>
@@ -308,12 +344,16 @@
       <h2>Questions guests ask</h2>
     </header>
     <div class="faq-cols">
-      <details><summary>Can I arrive early or leave late?</summary><p>Early check-in is €20 (room from 12:00). Late check-out is €20 (keep it until 14:00). Add either when you book.</p></details>
-      <details><summary>What's the cancellation policy?</summary><p>On the Flexible rate, cancel free up to 7 days before arrival; closer to the date a charge may apply. Non-refundable bookings can't be cancelled free of charge.</p></details>
-      <details><summary>Is there parking?</summary><p>Not at the house, and the historic centre is one-way streets. Leave the car in a nearby public car park and take a taxi or Bolt to the door.</p></details>
-      <details><summary>Can I bring my pet?</summary><p>Yes, for €20 per stay, in every room except the Deluxe Double. Let us know in advance.</p></details>
-      <details><summary>How far are the palaces?</summary><p>The National Palace is 3 minutes on foot, Quinta da Regaleira 7, and Pena 15 minutes by bus.</p></details>
-      <details><summary>How do I pay?</summary><p>Send your request and the house confirms availability and the price on WhatsApp. Card payment online is coming soon.</p></details>
+      <details><summary>Can I arrive early or leave late?<i data-lucide="chevron-down" aria-hidden="true"></i></summary><p>Early check-in is €20 (room from 12:00). Late check-out is €20 (keep it until 14:00). Add either when you book.</p></details>
+      <details><summary>What's the cancellation policy?<i data-lucide="chevron-down" aria-hidden="true"></i></summary><p>On the Flexible rate, cancel free up to 7 days before arrival; closer to the date a charge may apply. Non-refundable bookings can't be cancelled free of charge.</p></details>
+      <details><summary>Is there parking?<i data-lucide="chevron-down" aria-hidden="true"></i></summary><p>Not at the house, and the historic centre is one-way streets. Leave the car in a nearby public car park and take a taxi or Bolt to the door.</p></details>
+      <details><summary>Can I bring my pet?<i data-lucide="chevron-down" aria-hidden="true"></i></summary><p>Yes, for €20 per stay, in every room except the Deluxe Double. Let us know in advance.</p></details>
+      <details><summary>How far are the palaces?<i data-lucide="chevron-down" aria-hidden="true"></i></summary><p>The National Palace is 3 minutes on foot, Quinta da Regaleira 7, and Pena 15 minutes by bus.</p></details>
+      <details><summary>How do I pay?<i data-lucide="chevron-down" aria-hidden="true"></i></summary><p>Send your request and the house confirms availability and the price on WhatsApp. Card payment online is coming soon.</p></details>
+    </div>
+    <div class="faq-more">
+      <p>Still have a question? The house answers on WhatsApp.</p>
+      <a class="btn btn-line" href="https://wa.me/351924338608" target="_blank" rel="noopener">Message the house</a>
     </div>
   </div>
 </section>
@@ -344,7 +384,7 @@
 
 <div class="mbar">
   <a class="mbar-wa" href="https://wa.me/351924338608" target="_blank" rel="noopener" aria-label="WhatsApp the house">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/></svg>
+    <span class="i-wa i-wa-lg" aria-hidden="true"></span>
   </a>
   <p>From <strong>€89</strong> a night</p>
   <button class="btn btn-cobalt" type="button" data-book-open>Check dates</button>
@@ -356,6 +396,7 @@
 <a class="concept-switch" href="../a/">See concept A</a>
 
 <script src="../assets/js/booking.js"></script>
+<script src="../assets/vendor/lucide.min.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

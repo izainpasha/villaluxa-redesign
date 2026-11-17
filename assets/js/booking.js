@@ -119,7 +119,7 @@
     var html = '';
     html += '<div class="bk-head"><h2 class="bk-title" id="bk-title">Your stay</h2>' +
       '<button type="button" class="bk-close" data-book-close aria-label="Close booking panel">' +
-      '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button></div>';
+      '<i data-lucide="x" aria-hidden="true"></i></button></div>';
 
     html += '<div class="bk-body">';
     // Step 1
@@ -166,6 +166,7 @@
       '<p class="bk-fine">Nothing is charged now. The house confirms availability and the final price in the chat. Card payment by Stripe is coming soon.</p></div>';
 
     root.innerHTML = html;
+    if (window.lucide) window.lucide.createIcons(); // Lucide (ISC), loaded by each page
   }
 
   function sync() {
